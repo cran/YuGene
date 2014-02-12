@@ -23,10 +23,12 @@ YuGene(data.prop, progressBar = TRUE)
 returns a matrix of the same dimensions with each sample transformed to the cumulative proportion (YuGene) metric. 
 }
 \references{
-McHugh L., Le Cao K. A., and Wells C. A. YuGene: A simple method for comparing gene expression across platforms using a cumulative proportion approach.  Submitted Nov 2012.
+Le Cao K. A., McHugh L., Rohart F. and Wells C. A. YuGene: A simple approach to compare gene expression data derived from different platforms.  Submitted July 2013.
 }
 \author{
-McHugh L., Le Cao K. A., Queensland Facility for Advanced Bioinformatics, University of Queensland, St Lucia, Australia. 
+KA Le Cao, Queensland Facility for Advanced Bioinformatics, Institute for Molecular Biology, The University of Queensland, St Lucia, Australia \cr
+Leo McHugh, Queensland Facility for Advanced Bioinformatics \cr
+Florian Rohart, Australian Institute for Bioengineering and Nanotechnology, The University of Queensland, St Lucia, Australia 
 }
 \note{
 Support for missing values not yet implemented. Will implement if requested. 

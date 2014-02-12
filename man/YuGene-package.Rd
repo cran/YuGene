@@ -20,11 +20,12 @@ License: \tab GPL >= 2\cr
 This package provides a single function (YuGene). It takes a log transformed dataset (ie multiple microarray samples in an experiment) and converts the values to a cumulative proportion. Values close to zero have the lowest expression, and values close to 1 have the highest expression. When many datasets have been YuGene transformed, relative expression levels (YuGene values) can be directly compared across experiments without re-normalization without significant loss of sensitivity when compared to quantile normalized data. 
 }
 \author{
-KA Le Cao, Queensland Facility for Advanced Bioinformatics, Institute for Molecular Biology, The University of Queensland, St Lucia, Australia \\
-Leo McHugh, Queensland Facility for Advanced Bioinformatics.
+KA Le Cao, Queensland Facility for Advanced Bioinformatics, Institute for Molecular Biology, The University of Queensland, St Lucia, Australia \cr
+Leo McHugh, Queensland Facility for Advanced Bioinformatics \cr
+Florian Rohart, Australian Institute for Bioengineering and Nanotechnology, The University of Queensland, St Lucia, Australia 
 }
 \references{
-McHugh L., Le Cao K. A., and Wells C. A. YuGene: A simple method for comparing gene expression across platforms using a cumulative proportion approach.  Submitted Nov 2012.
+Le Cao K. A., McHugh L., Rohart F. and Wells C. A. YuGene: A simple approach to compare gene expression data derived from different platforms.  Submitted July 2013.
 }
 
 \keyword{ package }
