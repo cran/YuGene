@@ -26,7 +26,13 @@ YuGene = function(data.prop, progressBar = TRUE){
 	byIndex = byOrder[order(byOrder[,1]),] # re-sort by index
 
     CumProp[,col] = byIndex[,3] # replace with cum prop values
-    if(progressBar == TRUE) setTxtProgressBar(pb,col/ncol(data.prop)) # show progress
+    if(progressBar == TRUE)
+    {
+        setTxtProgressBar(pb,col/ncol(data.prop)) # show progress
+    }
   }
-  return(1-as.matrix(CumProp,nrow = nrow(data.prop), ncol = ncol(data.prop)))
+  cat("\n")# go to next line
+  out=1-as.matrix(CumProp,nrow = nrow(data.prop), ncol = ncol(data.prop))
+  class(out)="YuGene"
+  invisible(out)
 } # end function

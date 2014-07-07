@@ -13,14 +13,14 @@ YuGene is a simple transform that answers the question: where is my gene of inte
 \tabular{ll}{
 Package: \tab YuGene\cr
 Type: \tab Package\cr
-Version: \tab 1.0\cr
-Date: \tab 2012-11-27\cr
+Version: \tab 1.1.2\cr
+Date: \tab 2014-11-27\cr
 License: \tab GPL >= 2\cr
 }
 This package provides a single function (YuGene). It takes a log transformed dataset (ie multiple microarray samples in an experiment) and converts the values to a cumulative proportion. Values close to zero have the lowest expression, and values close to 1 have the highest expression. When many datasets have been YuGene transformed, relative expression levels (YuGene values) can be directly compared across experiments without re-normalization without significant loss of sensitivity when compared to quantile normalized data. 
 }
 \author{
-KA Le Cao, Queensland Facility for Advanced Bioinformatics, Institute for Molecular Biology, The University of Queensland, St Lucia, Australia \cr
+KA Le Cao, Translational Research Institute, The University of Queensland Diamantina Institute, Australia \cr
 Florian Rohart, Australian Institute for Bioengineering and Nanotechnology, The University of Queensland, St Lucia, Australia \cr
 Leo McHugh, Queensland Facility for Advanced Bioinformatics \cr
 Othmar Korn, Australian Institute for Bioengineering and Nanotechnology, The University of Queensland, St Lucia, Australia \cr

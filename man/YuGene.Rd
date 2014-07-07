@@ -20,13 +20,17 @@ YuGene(data.prop, progressBar = TRUE)
   \item{progressBar}{set to FALSE to supress progress bar}
 }
 \value{
-returns a matrix of the same dimensions with each sample transformed to the cumulative proportion (YuGene) metric. 
+returns an object of class `YuGene': a matrix of the same dimensions with each sample transformed to the cumulative proportion (YuGene) metric.
 }
+
+\seealso{\code{\link{pca}}}
+
+
 \references{
 Kim-Anh Lê Cao, Florian Rohart, Leo McHugh, Othmar Korn, Christine A. Wells. YuGene: A simple approach to scale gene expression data derived from different platforms for integrated analyses. Genomics. http://dx.doi.org/10.1016/j.ygeno.2014.03.001.
 }
 \author{
-KA Le Cao, Queensland Facility for Advanced Bioinformatics, Institute for Molecular Biology, The University of Queensland, St Lucia, Australia \cr
+KA Le Cao, Translational Research Institute, The University of Queensland Diamantina Institute, Australia \cr
 Florian Rohart, Australian Institute for Bioengineering and Nanotechnology, The University of Queensland, St Lucia, Australia \cr
 Leo McHugh, Queensland Facility for Advanced Bioinformatics \cr
 Othmar Korn, Australian Institute for Bioengineering and Nanotechnology, The University of Queensland, St Lucia, Australia \cr

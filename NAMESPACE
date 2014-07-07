@@ -1,1 +1,7 @@
-exportPattern("^[[:alpha:]]+")
+import(mixOmics)
+
+export(YuGene,pca)
+
+S3method(pca, YuGene)
+S3method(pca, default)
+
