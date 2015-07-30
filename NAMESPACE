@@ -1,5 +1,7 @@
 import(mixOmics)
 
+importFrom("utils", "setTxtProgressBar", "txtProgressBar")
+
 export(YuGene,pca)
 
 S3method(pca, YuGene)

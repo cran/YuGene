@@ -67,29 +67,31 @@ Christine A. Wells, Australian Institute for Bioengineering and Nanotechnology, 
 #load data
 data(array)
 
+YuGene.data=t(YuGene(t(array$data.all))) # transpose the data to get the samples in columns
+
 #PCA on YuGene data, centered by study
-res.pca.yugene.center = pca(array$data.all, ncomp = 3, scale = TRUE,
+res.pca.yugene.center = pca(YuGene.data, ncomp = 3, scale = TRUE,
             center = TRUE, study = array$experiment.all)
 expl.var = round(res.pca.yugene.center$sdev/sum(res.pca.yugene.center$sdev),4)*100
+
 #plot of the results, one color per cell-type, one shape per study
-plotIndiv(res.pca.yugene.center, ind.names = FALSE, pch = as.numeric(array$experiment.all),
-            abline.line = FALSE,
+plot(res.pca.yugene.center$x[,1],res.pca.yugene.center$x[,2],
+            pch = as.numeric(array$experiment.all),
+            col = as.numeric(array$type.all)+1, lwd = 2,
+            cex = 1.5, cex.lab = 1.5,xlab=paste("PC1:",expl.var[1],"\%"),
+            ylab=paste("PC2:",expl.var[2],"\%"))
+title(paste('YuGene multi group data'), cex.main = 1.5)
+
+#PCA on YuGene data, not centered by study
+res.pca.yugene = pca(YuGene.data, ncomp = 3, scale = TRUE, center = TRUE)
+expl.var = round(res.pca.yugene$sdev/sum(res.pca.yugene$sdev),4)*100
+
+#plot of the results, one color per cell-type, one shape per study
+plot(res.pca.yugene$x[,1],res.pca.yugene$x[,2],
+            pch = as.numeric(array$experiment.all),
             col = as.numeric(array$type.all)+1, lwd = 2,
             cex = 1.5, cex.lab = 1.5,X.label=paste("PC1:",expl.var[1],"\%"),
             Y.label=paste("PC2:",expl.var[1],"\%"))
-title(paste('YuGene multi group data'), cex.main = 1.5)
-
-
-#PCA on YuGene data, centered by study
-res.pca.yugene = pca(array$data.all, ncomp = 3, scale = TRUE, center = TRUE)
-expl.var = round(res.pca.yugene$sdev/sum(res.pca.yugene$sdev),4)*100
-#plot of the results, one color per cell-type, one shape per study
-plotIndiv(res.pca.yugene, ind.names = FALSE, pch = as.numeric(array$experiment.all),
-          abline.line = FALSE,
-          col = as.numeric(array$type.all)+1, lwd = 2,
-          cex = 1.5, cex.lab = 1.5,X.label=paste("PC1:",expl.var[1],"\%"),
-          Y.label=paste("PC2:",expl.var[1],"\%"))
 title(paste('YuGene data'), cex.main = 1.5)
 }
-
 
