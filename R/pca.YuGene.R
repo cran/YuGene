@@ -11,18 +11,17 @@ pca.mixOmics=pca
 pca=function(X,...){UseMethod("pca")}
 
 #the default pca is the function from mixOmics
-pca.default=function(X,ncomp = 3,
+pca.default=function(X,ncomp = 2,
         center = TRUE,
         scale = FALSE,
-        comp.tol = NULL,
         max.iter = 500,
         tol = 1e-09,...)
 {
-    out=pca.mixOmics(X,ncomp,center,scale,comp.tol,max.iter,tol)
+    out=pca.mixOmics(X,ncomp,center,scale,max.iter,tol)
 }
 
 #PCA for the class YuGene, the difference is the addition of the `study' parameter that allows to center the data per study
-pca.YuGene=function(X,study,ncomp = 3,center = TRUE,scale = FALSE,comp.tol = NULL,max.iter = 500,tol = 1e-09,...)
+pca.YuGene=function(X,study,ncomp = 2,center = TRUE,scale = FALSE,max.iter = 500,tol = 1e-09,...)
 {
     if(!missing(study))
     {
@@ -61,13 +60,13 @@ pca.YuGene=function(X,study,ncomp = 3,center = TRUE,scale = FALSE,comp.tol = NUL
         
         # perform the pca from mixOmics on the centered data
         X.center.study=concat.X
-        out=pca.default(X=X.center.study,ncomp,center,scale,comp.tol,max.iter,tol)
+        out=pca.default(X=X.center.study,ncomp,center,scale,max.iter,tol)
         
     }else{
         # print("pca.default") # debug:check that the right pca is used
 
         # perform the pca on the original (non-centered) data
-        out=pca.default(X=X,ncomp,center,scale,comp.tol,max.iter,tol)
+        out=pca.default(X=X,ncomp,center,scale,max.iter,tol)
     }
     
     

@@ -9,8 +9,8 @@ Performs a principal components analysis from the \code{\link[mixOmics]{pca}} fu
 }
 
 \usage{
-    \method{pca}{default}(X, ncomp = 3, center = TRUE, scale = FALSE,
-    comp.tol = NULL, max.iter = 500, tol = 1e-09,\dots)
+    \method{pca}{default}(X, ncomp = 2, center = TRUE, scale = FALSE,
+    max.iter = 500, tol = 1e-09,\dots)
 }
 
 \arguments{
@@ -27,7 +27,6 @@ Performs a principal components analysis from the \code{\link[mixOmics]{pca}} fu
     unit variance before the analysis takes place. The default is \code{FALSE} for consistency with \code{prcomp} 
     function, but in general scaling is advisable. Alternatively, a vector of length equal the number of 
     columns of \code{X} can be supplied. The value is passed to \code{\link{scale}}.} 
-  \item{comp.tol}{a value indicating the magnitude below which components should be omitted.} 
   \item{max.iter}{integer, the maximum number of iterations in the NIPALS algorithm.}
   \item{tol}{a positive real, the tolerance used in the NIPALS algorithm.}
 \item{\dots}{not used.}
