@@ -1,13 +1,14 @@
-c8250b5debc5c9ed5b56b9c4ab51dc3c *DESCRIPTION
+fe0afc7a35ebf55b9696cb2402471f29 *DESCRIPTION
 d82343d1064dad5407f21483af635cc6 *NAMESPACE
 38411a39ce3d29f3878462f572a51ba3 *NEWS
 43d9b9176c8141dc8f6fc3f1d65b5ca4 *R/YuGene.R
 173e4c5e2c4320cfe5e30779eead1586 *R/pca.YuGene.R
 6d16ce5b67812b66fb249471a035dc81 *R/study_split.R
+ef9e4e7689aabccd1ede25ada83b3e6e *build/partial.rdb
 4c92087af739b60cdb6bf390d003f518 *data/array.rda
 5a12f90f774765b2d3c6989b937eb796 *data/ascorbate.rda
 f526dae519b6cc35a4231f95f2d30638 *data/datalist
-89dd38b53bae08835d4afde166e261f9 *man/YuGene-package.Rd
+f8e7684b6fc481b296406caa66a97cec *man/YuGene-package.Rd
 fe6833977613cd1ddb5b645fa05ef096 *man/YuGene.Rd
 f9f1827163a199b8daab7db70c8c3f71 *man/array.Rd
 e2cfd2ce8e869145b4dde73f76cf5465 *man/ascorbate.Rd
